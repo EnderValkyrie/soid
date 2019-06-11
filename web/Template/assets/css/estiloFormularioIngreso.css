@@ -1,0 +1,171 @@
+@font-face{
+    font-family: narrow;
+    src: url(../img/narrow.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 0;
+    font-family: narrow;
+    text-decoration: none;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+.inicio{
+    width: 100%;
+    height: 100%;
+}
+
+/* Encabezado */
+header{
+    width: 100%;
+    height: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px solid gray;
+}
+header img{
+    width: 8%;
+    vertical-align: top;
+}
+header nav{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav a{
+    background: #424242;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 16pt;
+}
+header nav a:hover{
+    background: #c0392b;
+}
+header nav a:active{
+    background: #c0392b;
+}
+
+header #ingreso{
+    width: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header #ingreso a{
+    background: #424242;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 16pt;
+}
+header #ingreso a:hover{
+    background: #c0392b;
+}
+
+/* Idioma */
+header #idioma{
+    width: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    border-radius: 10px;
+}
+header #idioma img{
+    width: 100%;
+}
+header #idioma img:hover{
+    background: #c0392b;
+    border-radius: 60px;
+}
+
+/* Imagenes */
+main{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 180px 0px 100px 330px;
+    background: url(../img/negro.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+main h1{
+    font size: 10pt;
+    background-color: #c0392b;
+    width: 100%;
+}
+
+main .ingreso{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background:rgba(255, 255, 255, 0.7);
+    text-align: center;
+    color: white;
+    font-size: 15pt;
+    padding: 50px;
+    margin: 0 0 250px 0;
+}
+
+/* Form */
+.titulo{
+    width: 100%;
+    height: 100px;
+    font-size: 18pt;
+}
+.colum{
+    width: 100%;
+}
+.form-control{
+    width: 100%;
+    height: 30px;
+}
+.formulario{
+    width: 90%;
+    height: 90%;
+    
+}
+.btn{
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #424242;
+    color: #fff;
+}
+
+/* Pie de página */
+footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .gaes{
+    width: 50%;
+    background: #199F87; 
+    padding: 50px 0 0 50px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 12pt;
+}
+

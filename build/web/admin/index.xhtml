@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="./../Template/tema.xhtml">
+
+            <ui:define name="top">
+
+                <img src="../Template/assets/img/Logo_definitivo.png" alt=""/>
+
+                <nav>	
+                    <a href="index.html">Inicio</a>
+                    <a href="html/portafolio.html">Portafolio</a>
+                    <a href="html/quienes_somos.html">Quiénes somos</a>
+                    <a href="">Contáctenos</a>
+                </nav>
+
+                <div id="idioma">
+
+                    <a href="index_ingles.html"><img src="../Template/assets/img/English.png"></img></a>
+                </div>
+
+            </ui:define>
+
+            <ui:define name="left">
+
+                <div class="imagen">
+                    <img src="../Template/assets/img/administrador.png" alt=""></img>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Pedro Perez</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Admin</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <a href="index.xhtml" style="color: black"><h2>Registrar usuario</h2></a>
+                </div>
+
+
+            </ui:define>
+
+
+            <ui:define name="content">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Contraseña</th>
+                            <th scope="col">Rol</th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        <c:forEach var="usu"  items="#{usuarioSesion.usuarioRegistrados}">
+                            <tr>
+                                <th scope="row">#{usu.nombre}</th>
+                                <td>#{usu.apellido}</td>
+                                <td>#{usu.clave}</td>
+                                <td>#{usu.usuario}</td>
+                                <td>
+                                    <c:forEach var="rol" items="">
+
+                                    </c:forEach>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+
+            </ui:define>
+
+
+        </ui:composition>
+
+    </body>
+</html>

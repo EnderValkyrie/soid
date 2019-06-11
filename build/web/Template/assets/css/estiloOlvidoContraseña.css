@@ -1,0 +1,181 @@
+@font-face{
+	font-family:narrow;
+	src: url(narrow.ttf);
+}
+*{
+	box-sizing: border-box;
+	margin-top: 0px;
+	padding: 0px;
+	font-family: narrow;
+	font-weight: normal;
+	text-decoration: none;
+}
+/* Clases especiales */
+.borde{
+	border: 1px solid black;
+}
+.color{
+	color: rgb(255, 255, 255);
+}
+.color2{
+	color: rgb(0, 0, 0);	
+}
+
+/* Contenedor */
+.contenedor{
+	width: 95%;
+	max-width: 2000px;
+	height: 1100px;
+	padding: 50px;
+}
+
+/* Caja total */
+.todo{
+	width: 1500px;
+	height: 1050px;
+	background-image: url(../img/negra1.png);
+	background-size: 100% 100%;
+	margin: auto 150px;
+}
+/* Logo */
+.logo{
+	width: 15%;
+	height: 150px;
+	float: left;
+	text-align: center;
+	background-color: rgb(153, 68, 39, 0.9);
+	padding: auto 5px;
+}
+.logo img{
+	width: auto;
+	height: 90%;
+	margin: 10px auto;
+}
+
+/* Barra botones */
+.navegar{
+	width: 60%;
+	height: 150px;
+	float: left;
+	padding: 60px;
+	text-align: center;
+	background-color: rgb(153, 68, 39, 0.9);
+}
+.navegar a {
+	background-color:#800000;
+	color: #fff;
+	text-decoration:none;
+	padding:10px 25px;
+	border-radius: 15px;
+}
+.ingresar{
+	width: 25%;
+	height: 150px;
+	float: left;
+	text-align: center;
+	padding: 58px;
+	background-color: rgb(153, 68, 39, 0.9);
+}
+.ingresar a{
+	background-color:#800000;
+	color: #fff;
+	text-decoration:none;
+	padding:5px 5px;
+	border-radius: 10px;
+	font-size: 16pt;
+	margin: 10px auto;
+}
+.link{
+	font-size: 18pt;
+}
+
+/*Espaciado */
+.espacio{
+	width: 100%;
+	height: 50px;
+	clear: both;
+}
+
+/* Main */
+.main{
+	width: 90%;
+	height: 700px;
+	margin: 10px auto;
+
+}
+.margen{
+	width: 19%;
+	height: 100%;
+	float: left;
+}
+.margen1{
+	width: 80%;
+	height: 20%;
+	float: left;
+}
+.ingreso{
+	width: 60%;
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.7);
+	float: left;
+	border-radius: 20px;
+}
+.titulo{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: rgb(153, 68, 39, 0.9);
+}
+.titulo h2{
+	font-size: 30pt;
+}
+.titulos{
+	width: 30%;
+	height: 350px;
+	clear: both;
+	float: left;
+}
+.inputs{
+	width: 100%;
+	height: 350px;
+}
+.usucon{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	font-size: 17pt;
+	margin: 100px auto;
+}
+.input1{
+	width: 60%;
+	height: 40px;
+	font-size: 17pt;
+}
+.boton{
+	width: 150px;
+	height: 40px;
+	font-size: 18pt;
+	border-radius: 10px;
+	margin: 50px auto;
+}
+
+/*Espaciado */
+.espacio1{
+	width: 100%;
+	height: 50px;
+	clear: both;
+}
+
+/* Footer */
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: rgb(58, 93, 165);
+}
+.pie{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	padding: 50px;
+}

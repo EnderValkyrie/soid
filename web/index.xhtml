@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"></meta>
+
+        <link rel="stylesheet" href="Template/assets/css/estilo_Principal.css"></link>
+        <link rel="icon" href="Template/assets/img/home.png"></link>
+	
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+	<title>Principal</title>
+    </h:head>
+    <h:body>
+       
+        <div class="contenedor">
+		
+	<!-- Inicio -->	
+
+	<div class="inicio">
+		
+	<header>
+
+            <img src="Template/assets/img/Logo_definitivo.png" alt=""></img>
+		
+		<nav>	
+		<a href="index.xhtml">Inicio</a>
+		<a href="portafolio.xhtml">Portafolio</a>
+                <a href="quienes_somos.xhtml">Quiénes somos</a>
+		<a href="">Contáctenos</a>
+		</nav>
+		
+		<div id="ingreso">
+			<a href="formularioIngreso.xhtml">Ingresar</a>
+		</div>
+		
+			<div id="idioma">
+				
+                            <a href="index_ingles.xhtml"><img src="Template/assets/img/English.png"></img></a>
+			</div>
+
+                </header>
+
+	<main>
+		
+		<div class="slides">
+
+                    <img src="Template/assets/img/1.jpg" alt=""></img>
+                    <img src="Template/assets/img/2.jpg" alt=""></img>
+                    <img src="Template/assets/img/3.jpg" alt=""></img>
+                    <img src="Template/assets/img/4.jpg" alt=""></img>
+			
+                        </div>
+
+	</main>
+
+	<footer>
+		<div class="gaes">
+			
+		<h1>Desarrollado por GAES 7</h1>
+		</div>
+
+		<div class="gaes">
+			
+		<h1>&copy;2019</h1>
+		</div>
+	</footer>
+
+	</div>
+	
+
+</div>
+
+<!-- Script para el slideshow -->
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="Template/assets/js/jquery.slides.js"></script>
+<script>
+$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: false,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "fade",
+        // [string] Can be either "slide" or "fade".
+      interval: 3000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+</script>
+        
+</h:body>
+</html>
+

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough">
+
+    <body>
+
+        <ui:composition template="../Template/tema.xhtml">
+
+
+            <ui:define name="left">
+
+                <div class="imagen">
+                    <img src="../Template/assets/img/malhumorado-jefe-vectores-eps_csp4686013.png" alt=""></img>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Carlos Garcia</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Jefe de almacén</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <a href="index.xhtml" style="color: black"><h2>Editar perfil</h2></a>
+                </div>
+
+                <div class="casos">
+                    <div class="caso borde"><a href="consultarMaterialesAdmin.html" style="color: black">Consultar existencias</a></div>
+                    <div class="caso borde">
+                        <a href="informeExistencias.html" style="color: black">Realizar informe</a></div>
+
+                </div>
+
+            </ui:define>
+
+
+            <ui:define name="content">
+                <div class="titulo"><h1>Mi perfil</h1></div>
+
+                <div class="formulario">
+                    <h:form>
+                        <h:messages  style="color:red;margin:8px;"/> 
+
+                        <div class="colum">
+                            <label for="titulo">Nombres</label>
+                            <h:inputText class="form-control" id="idnombres"  maxlength="30" html5:placeholder="Carlos Alfonso"  required="false"  validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese nombres"/>
+                            <h:message for="idnombres"></h:message>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Apellidos</label>
+                            <h:inputText id="idapellidos" class="form-control"  maxlength="30" html5:placeholder="Garcia Velaquez"  required="false"  validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese apelidos"/>
+                            <h:message for="idapellidos"></h:message>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Tipo de documento</label>
+                            <select name="lista" id="" class="form-control">
+                                <option value="1">Cedula de ciudadanía</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">Carnet extranjería</option>
+                                <option value="3">DNI</option>
+                            </select>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">N. documentos</label>
+                            <h:inputText id="iddocumento" class="form-control"  maxlength="15" html5:placeholder="1030645895"  required="false"  validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese número de indentidad"/>
+                            <h:message for="iddocumento"></h:message>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Correo</label>
+                            <h:inputText id="idcorreo" class="form-control" html5:placeholder="carlitos123@soid.com" maxlength="30" required="false" validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese nombres"/>
+                            <h:message for="idcorreo"></h:message>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Telefono</label>
+                            <h:inputText id="idtelefono" class="form-control" html5:placeholder="1234567" maxlength="30" required="false" validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese nombres"/>
+                            <h:message for="idtelefono"></h:message>
+                        </div>
+
+                        <h:messages  style="color:red;margin:8px;"/> 
+
+                        <div class="colum">
+                            <label for="titulo">País</label>
+                            <select name="pais"  class="form-control">
+                                <option value="KH">Camboya</option>
+                                <option value="CM">Camerún</option>
+                                <option value="CA">Canadá</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CY">Chipre</option>
+                                <option value="VA">Ciudad del Vaticano (Santa Sede)</option>
+                                <option value="CO" selected="">Colombia</option>
+                                <option value="KM">Comores</option>
+                                <option value="CG">Congo</option>
+                            </select>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Ciudad</label>
+                            <select name="ciudades" id="" class="form-control">
+                                <option value="1">San Miguel de Allende</option>
+                                <option value="2">Charleston</option>
+                                <option value="3">Chiang Mai</option>
+                                <option value="4" selected="">Bogota D.C</option>
+                                <option value="5">Kioto</option>
+                                <option value="6">Florencia</option>
+                                <option value="7">Oaxaca</option>
+                                <option value="8">Hoi An</option>
+                                <option value="9">Ciudad del cabo</option>
+                                <option value="10">Ubud</option>
+                                <option value="11">Luang Prabang</option>
+                            </select>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Dirección</label>
+                            <h:inputText id="iddireccion" class="form-control"  maxlength="20" html5:placeholder="Calle falsa 123"  required="false"  validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese direccion"/>
+                            <h:message for="iddireccion"></h:message>
+                        </div>
+
+                        <div class="colum">
+                            <label for="titulo">Contraseña</label>
+                            <h:inputText id="idcontrasenia" class="form-control" html5:placeholder="**********" maxlength="20" required="false" validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese contraseña"/>
+                            <h:message for="idcontrasenia"></h:message>
+                        </div>
+                        <div class="colum">
+                            <label for="titulo">Repetir contraseña</label>
+                            <h:inputText id="idrepcontrasenia" class="form-control" html5:placeholder="**********" maxlength="20" required="false" validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese nuevamente su contraseña"/>
+                            <h:message for="idrepcontrasenia"></h:message>
+                        </div>
+
+                        <h:commandButton class="btn btn-primary-lg" value="Actualizar"></h:commandButton>
+
+                    </h:form>
+                </div>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
