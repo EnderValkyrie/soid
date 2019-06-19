@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough">
+
+    <body>
+
+        <ui:composition template="./Template/tema.xhtml">
+
+            <ui:define name="top">
+
+                <img src="Template/assets/img/Logo_definitivo.png" alt=""/>
+
+                <nav>	
+                    <a href="index.xhtml">Inicio</a>
+                    <a href="portafolio.xhtml">Portafolio</a>
+                    <a href="quienes_somos.xhtml">Quiénes somos</a>
+                    <a href="contactenos.xhtml">Contáctenos</a>
+                </nav>
+
+                <div id="idioma">
+
+                    <a href="index_ingles.html"><img src="Template/assets/img/English.png"></img></a>
+                </div>
+
+            </ui:define>
+
+            <ui:define name="left">
+
+                <div class="imagen">
+                    <img src="Template/assets/img/administrador.png" alt=""></img>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Pedro Perez</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <h2>Admin</h2>
+                </div>
+
+                <div class="perfil borde">
+                    <a href="index.xhtml" style="color: black"><h2>Registrar usuario</h2></a>
+                </div>
+
+            </ui:define>
+
+            <ui:define name="content">
+                
+                <h:form class="form">
+                    
+                    <h:messages style="font-size:15pt;color:#990000;margin:8px;"/>
+                    
+                    <div class ="formulario">
+                        
+                    <label for="Nombres">Nombre</label>
+                    <h:inputText class ="input" html5:placeholder="nombre" id="idNombre" maxlength="30" required="true" validatorMessage="solo se adminte 30 caracteres" requiredMessage="Ingrese Nombre"></h:inputText>
+                    </div>
+                    <div class="formulario">
+                     
+                        <label for="Apellidos">Apellido</label>
+                        <h:inputText class="input" html5:placeholder="apellido" id="idApellido" maxlength="30" required="true" validatorMessage="solo se admite 30 caracteres" requiredMessage="Ingrese Apellido"></h:inputText>
+                    </div>
+                    
+                    <label for="Correo" >Correo</label>
+                    <h:inputText class="input" html5:placeholder="correo" id="idCorreo" maxlength="30" required="true" validatorMessage="solo se admite 30 caracteres" requiredMessage="Ingrese Correo"></h:inputText>
+                    
+                    <div class="formulario">
+                        <label for="Usuario">Usuario</label>
+                        <h:inputText class="input" html5:placeholder="Usuario" id="idUsuario" maxlength="30" required="true" validatorMessage="solo se admite 30 caracteres" requiredMessage="Ingrese el nombre de su usuario"></h:inputText>
+                        
+                    </div>
+                    
+                    
+                    <h:commandButton value="registrar" class="btn btn-primary-lg"></h:commandButton>
+                    
+                    
+                   
+                    
+                    
+                </h:form>
+                
+            </ui:define>
+        </ui:composition>
+
+    </body>
+</html>
