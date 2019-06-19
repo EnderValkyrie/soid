@@ -23,7 +23,7 @@
                     <a href="index.xhtml">Inicio</a>
                     <a href="portafolio.xhtml">Portafolio</a>
                     <a href="quienes_somos.xhtml">Quiénes somos</a>
-                    <a href="">Contáctenos</a>
+                    <a href="contactenos.xhtml">Contáctenos</a>
                 </nav>
 
                 <div id="ingreso">
@@ -44,18 +44,16 @@
                     <div class="formulario">
                         <h:form>
                             <br></br>
-                            <h:messages  style="color:red;margin:8px;"/> 
+                            <h:messages  style="font-size:15pt;color:#990000;margin:8px;"/> 
 
                             <div class="colum">
                                 <label for="titulo">Usuario</label>
                                 <h:inputText value="#{validacionSession.usuario}" class="form-control" id="idusuario" html5:placeholder="Usuario"  required="true"  validatorMessage="No debe superar 30 caracteres" requiredMessage="Ingrese usuario"/>
-                                <h:message for="idusuario"></h:message>
                             </div>
 
                             <div class="colum">
                                 <label for="titulo">Contraseña</label>
                                 <h:inputText value="#{validacionSession.contrasenia}" id="idcontrasenia" class="form-control"  maxlength="20" html5:placeholder="Contraseña"  required="true"  validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese contraseña"/>
-                                <h:message for="idcontrasenia"></h:message>
                             </div>
                             <br></br>
                             <a href="" style="color: black">Recuperar contraseña</a>

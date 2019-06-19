@@ -1,68 +1,124 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <meta charset="UTF-8"></meta>
-        <title>Portafolio</title>
-        <link rel="icon" href="Template/assets/img/portfolio.png"></link>
-        <link rel="stylesheet" href="Template/assets/css/estilo_portafolio.css"></link>
+        <link rel="icon" href="Template/assets/img/contract.png"></link>
+        <link rel="stylesheet" href="Template/assets/css/estilo_contacto.css"></link>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+        <title>Contáctenos</title>
+
     </h:head>
+
+
     <h:body>
-      
-		
-	<header>
+
+        <header>
 
             <img src="Template/assets/img/Logo_definitivo.png" alt=""></img>
-		
-		<nav>	
-		<a href="index.xhtml">Inicio</a>
-		<a href="portafolio.xhtml">Portafolio</a>
-		<a href="quienes_somos.xhtml">Quiénes somos</a>
-		<a href="">Contáctenos</a>
-		</nav>
-		
-		<div id="ingreso">
-			<a href="formularioIngreso.xhtml">Ingresar</a>
-		</div>
-		
-			<div id="idioma">
-				
-                            <a href="portafolio_ingles.xhtml"><img src="Template/assets/img/English.png"></img></a>
-			</div>
 
-	</header>
+            <nav>	
+                <a href="index.xhtml">Inicio</a>
+                <a href="portafolio.xhtml">Portafolio</a>
+                <a href="quienes_somos.xhtml">Quiénes somos</a>
+                <a href="contactenos.xhtml">Contáctenos</a>
+            </nav>
 
-	<main>
-		
-		<div class="mision_vision">
-			<h1>Misión</h1>
-			
-			Lograr la satisfacción de nuestros clientes supliendo las necesidades y requerimientos al ofrecerles sistemas integrales y sostenibles que permitan aprovechar al máximo los recursos disponibles, manteniendo siempre un proceso continuo de optimización y mejoramiento de productos y servicios, que junto a la revisión periódica de nuestros procesos permitan lograr una rentabilidad a nuestra compañía y un impacto positivo en la sociedad.
-		</div>
+            <div id="ingreso">
+                <a href="formularioIngreso.xhtml">Ingresar</a>
+            </div>
 
-		<div class="mision_vision">
-			<h1>Visión</h1>
-                        <br></br>
-			Ser para el año 2020 la empresa de seguridad electrónica, fabricante y comercializadora de equipos bancarios y de oficina con la más amplia selección de productos relacionados.
-		</div>
-			
+            <div id="idioma">
 
-	</main>
+                <a href="contactenos_ingles.xhtml"><img src="Template/assets/img/English.png"></img></a>
+            </div>
 
-	<footer>
-		<div class="gaes">
-			
-		<h1>Desarrollado por GAES 7</h1>
-		</div>
+        </header>
 
-		<div class="gaes">
-			
-		<h1>&copy;2019</h1>
-		</div>
-	</footer>
-        
+        <main>
+
+            <div class="contacto">
+                <h:form class="formulario">
+                    <h1>Contáctenos</h1>
+                    <h:messages  style="font-size:15pt;color:#990000;margin:8px;"/>
+                    <br></br>
+
+                    <div class="colum">
+                        <label for="titulo">Nombre</label>
+                        <h:inputText class="form" html5:placeholder="Nombre" id="idNombre" maxlength="30" required="true" validatorMessage="No debe exceder 30 caràcteres"  requiredMessage="Ingrese nombre"></h:inputText>
+                    </div>
+                    
+                    <br></br>
+                    <div class="colum">
+                        <label for="titulo">Correo</label>
+                        <h:inputText class="form" html5:placeholder="Correo" id="idCorreo" maxlength="20" required="true" validatorMessage="No debe exceder 20 caràcteres"  requiredMessage="Ingrese correo electrónico"></h:inputText>
+                    </div>
+                    
+                    <br></br>
+                    <div class="colum">
+                        <label for="titulo">Teléfono</label>
+                        <h:inputText class="form" html5:placeholder="Teléfono" id="idTelefono" maxlength="12" required="false" validatorMessage="No debe exceder 12 caràcteres"  requiredMessage="Ingrese número de teléfono"></h:inputText>
+                    </div>
+                    
+                    <br></br>
+                    <div class="colum">
+                        <label for="titulo">Mensaje</label>
+                        <h:inputTextarea class="formtext" html5:placeholder="Mensaje" id="idMensaje" required="true" requiredMessage="Ingrese mensaje"></h:inputTextarea>
+                    </div>
+                    
+                    <br></br>
+                    <div class="boton">
+                        <h:commandButton class="btn btn-primary-lg" value="Enviar"></h:commandButton>
+                    </div>
+
+
+                </h:form>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="gaes">
+
+                <h1>Desarrollado por GAES 7</h1>
+            </div>
+
+            <div class="gaes">
+
+                <h1>&copy;2019</h1>
+            </div>
+        </footer> 
+
+
+
+
+
+        <script src="Template/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="Template/assets/vendor/animsition/js/animsition.min.js"></script>
+        <script src="Template/assets/vendor/bootstrap/js/popper.js"></script>
+        <script src="Template/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="Template/assets/vendor/select2/select2.min.js"></script>
+        <script src="Template/assets/vendor/daterangepicker/moment.min.js"></script>
+        <script src="Template/assets/vendor/daterangepicker/daterangepicker.js"></script>
+        <script src="Template/assets/vendor/countdowntime/countdowntime.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+        <script src="Template/assets/js/map-custom.js"></script>
+        <script src="Template/assets/js/main.js"></script>
+
+
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-23581568-13');
+        </script>
+
     </h:body>
 </html>
 

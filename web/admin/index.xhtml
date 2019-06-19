@@ -16,7 +16,7 @@
                     <a href="index.html">Inicio</a>
                     <a href="html/portafolio.html">Portafolio</a>
                     <a href="html/quienes_somos.html">Quiénes somos</a>
-                    <a href="">Contáctenos</a>
+                    <a href="../contactenos.xhtml">Contáctenos</a>
                 </nav>
 
                 <div id="idioma">
@@ -50,32 +50,66 @@
 
             <ui:define name="content">
 
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Usuario</th>
-                            <th scope="col">Contraseña</th>
-                            <th scope="col">Rol</th>
-                        </tr>
-                    </thead> 
-                    <tbody>
-                        <c:forEach var="usu"  items="#{usuarioSesion.usuarioRegistrados}">
-                            <tr>
-                                <th scope="row">#{usu.nombre}</th>
-                                <td>#{usu.apellido}</td>
-                                <td>#{usu.clave}</td>
-                                <td>#{usu.usuario}</td>
-                                <td>
-                                    <c:forEach var="rol" items="">
+                <div class="tabla">
 
-                                    </c:forEach>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+
+                    <div id="page-wrap">
+
+                        <h1>Usuarios</h1>
+
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Usuario</th>
+                                    <th>Contraseña</th>
+                                    <th>Correo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>James</td>
+                                    <td>Matman</td>
+                                    <td>Chief Sandwich Eater</td>
+                                    <td>Lettuce Green</td>
+                                    <td>Trek</td>
+                                </tr>
+                                <tr>
+                                    <td>The</td>
+                                    <td>Tick</td>
+                                    <td>Crimefighter Sorta</td>
+                                    <td>Blue</td>
+                                    <td>Wars</td>
+                                </tr>
+                                <tr>
+                                    <td>Jokey</td>
+                                    <td>Smurf</td>
+                                    <td>Giving Exploding Presents</td>
+                                    <td>Smurflow</td>
+                                    <td>Smurf</td>
+                                </tr>
+                                <tr>
+                                    <td>Cindy</td>
+                                    <td>Beyler</td>
+                                    <td>Sales Representative</td>
+                                    <td>Red</td>
+                                    <td>Wars</td>
+                                </tr>
+                                <tr>
+                                    <td>Captain</td>
+                                    <td>Cool</td>
+                                    <td>Tree Crusher</td>
+                                    <td>Blue</td>
+                                    <td>Wars</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
 
             </ui:define>
 
