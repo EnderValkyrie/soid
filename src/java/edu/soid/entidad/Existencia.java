@@ -54,6 +54,11 @@ public class Existencia implements Serializable {
         @JoinColumn(name = "producto_cod_producto", referencedColumnName = "cod_producto")})
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Producto> productoCollection;
+    @JoinTable(name = "existencia_has_producto", joinColumns = {
+        @JoinColumn(name = "existencia_idmaterial", referencedColumnName = "idmaterial")}, inverseJoinColumns = {
+        @JoinColumn(name = "producto_cod_producto", referencedColumnName = "cod_producto")})
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Producto> productoCollection1;
 
     public Existencia() {
     }
@@ -108,6 +113,15 @@ public class Existencia implements Serializable {
 
     public void setProductoCollection(Collection<Producto> productoCollection) {
         this.productoCollection = productoCollection;
+    }
+
+    @XmlTransient
+    public Collection<Producto> getProductoCollection1() {
+        return productoCollection1;
+    }
+
+    public void setProductoCollection1(Collection<Producto> productoCollection1) {
+        this.productoCollection1 = productoCollection1;
     }
 
     @Override

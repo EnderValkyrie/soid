@@ -54,6 +54,8 @@ public class Producto implements Serializable {
     private double precio;
     @ManyToMany(mappedBy = "productoCollection", fetch = FetchType.LAZY)
     private Collection<Existencia> existenciaCollection;
+    @ManyToMany(mappedBy = "productoCollection1", fetch = FetchType.LAZY)
+    private Collection<Existencia> existenciaCollection1;
     @JoinColumn(name = "pedido_idpedido", referencedColumnName = "idpedido")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Pedido pedidoIdpedido;
@@ -120,6 +122,15 @@ public class Producto implements Serializable {
 
     public void setExistenciaCollection(Collection<Existencia> existenciaCollection) {
         this.existenciaCollection = existenciaCollection;
+    }
+
+    @XmlTransient
+    public Collection<Existencia> getExistenciaCollection1() {
+        return existenciaCollection1;
+    }
+
+    public void setExistenciaCollection1(Collection<Existencia> existenciaCollection1) {
+        this.existenciaCollection1 = existenciaCollection1;
     }
 
     public Pedido getPedidoIdpedido() {

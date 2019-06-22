@@ -54,11 +54,14 @@ public class Cotizacion implements Serializable {
     @Basic(optional = false)
     @Column(name = "forma_pago")
     private String formaPago;
-    @JoinColumn(name = "vendedor_cod_vendedor", referencedColumnName = "cod_vendedor")
+    @Basic(optional = false)
+    @Column(name = "vendedor_cod_vendedor")
+    private int vendedorCodVendedor;
+    @JoinColumn(name = "pedido_idpedido", referencedColumnName = "idpedido")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Vendedor vendedorCodVendedor;
+    private Pedido pedidoIdpedido;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cotizacionIdcotizacion", fetch = FetchType.LAZY)
-    private Collection<Pedido> pedidoCollection;
+    private Collection<UsuarioHasRol> usuarioHasRolCollection;
 
     public Cotizacion() {
     }
@@ -67,11 +70,12 @@ public class Cotizacion implements Serializable {
         this.idcotizacion = idcotizacion;
     }
 
-    public Cotizacion(Integer idcotizacion, Date fecha, double precio, String formaPago) {
+    public Cotizacion(Integer idcotizacion, Date fecha, double precio, String formaPago, int vendedorCodVendedor) {
         this.idcotizacion = idcotizacion;
         this.fecha = fecha;
         this.precio = precio;
         this.formaPago = formaPago;
+        this.vendedorCodVendedor = vendedorCodVendedor;
     }
 
     public Integer getIdcotizacion() {
@@ -106,21 +110,29 @@ public class Cotizacion implements Serializable {
         this.formaPago = formaPago;
     }
 
-    public Vendedor getVendedorCodVendedor() {
+    public int getVendedorCodVendedor() {
         return vendedorCodVendedor;
     }
 
-    public void setVendedorCodVendedor(Vendedor vendedorCodVendedor) {
+    public void setVendedorCodVendedor(int vendedorCodVendedor) {
         this.vendedorCodVendedor = vendedorCodVendedor;
     }
 
-    @XmlTransient
-    public Collection<Pedido> getPedidoCollection() {
-        return pedidoCollection;
+    public Pedido getPedidoIdpedido() {
+        return pedidoIdpedido;
     }
 
-    public void setPedidoCollection(Collection<Pedido> pedidoCollection) {
-        this.pedidoCollection = pedidoCollection;
+    public void setPedidoIdpedido(Pedido pedidoIdpedido) {
+        this.pedidoIdpedido = pedidoIdpedido;
+    }
+
+    @XmlTransient
+    public Collection<UsuarioHasRol> getUsuarioHasRolCollection() {
+        return usuarioHasRolCollection;
+    }
+
+    public void setUsuarioHasRolCollection(Collection<UsuarioHasRol> usuarioHasRolCollection) {
+        this.usuarioHasRolCollection = usuarioHasRolCollection;
     }
 
     @Override

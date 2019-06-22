@@ -2,9 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
         <group name="Guia 1">
             <file>file:/C:/Users/EnderValkyrie/Documents/NetBeansProjects/SOID/web/portafolio.xhtml</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/soid/web/admin/index.xhtml</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/soid/web/Template/tema.xhtml</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/soid/web/rUsuario.xhtml</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/soid/web/contactenos.xhtml</file>
         </group>
     </open-files>
 </project-private>

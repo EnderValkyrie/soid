@@ -5,7 +5,7 @@
  */
 package edu.soid.facade;
 
-import edu.soid.entidad.Cotizacion;
+import edu.soid.entidad.Rol;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author APRENDIZ
  */
 @Stateless
-public class CotizacionFacade extends AbstractFacade<Cotizacion> implements CotizacionFacadeLocal {
+public class RolFacade extends AbstractFacade<Rol> implements RolFacadeLocal {
 
     @PersistenceContext(unitName = "SOIDPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class CotizacionFacade extends AbstractFacade<Cotizacion> implements Coti
         return em;
     }
 
-    public CotizacionFacade() {
-        super(Cotizacion.class);
+    public RolFacade() {
+        super(Rol.class);
     }
     
 }

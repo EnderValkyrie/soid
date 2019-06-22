@@ -16,8 +16,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -52,12 +50,11 @@ public class Pedido implements Serializable {
     @Column(name = "fecha_despacho")
     @Temporal(TemporalType.DATE)
     private Date fechaDespacho;
-    @JoinColumn(name = "cotizacion_idcotizacion", referencedColumnName = "idcotizacion")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Cotizacion cotizacionIdcotizacion;
-    @JoinColumn(name = "direccion_numero_domicilio", referencedColumnName = "numero_domicilio")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Direccion direccionNumeroDomicilio;
+    @Basic(optional = false)
+    @Column(name = "direccion_numero_domicilio")
+    private String direccionNumeroDomicilio;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pedidoIdpedido", fetch = FetchType.LAZY)
+    private Collection<Cotizacion> cotizacionCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pedidoIdpedido", fetch = FetchType.LAZY)
     private Collection<Producto> productoCollection;
 
@@ -68,10 +65,11 @@ public class Pedido implements Serializable {
         this.idpedido = idpedido;
     }
 
-    public Pedido(Integer idpedido, Date fechaSolicitud, Date fechaDespacho) {
+    public Pedido(Integer idpedido, Date fechaSolicitud, Date fechaDespacho, String direccionNumeroDomicilio) {
         this.idpedido = idpedido;
         this.fechaSolicitud = fechaSolicitud;
         this.fechaDespacho = fechaDespacho;
+        this.direccionNumeroDomicilio = direccionNumeroDomicilio;
     }
 
     public Integer getIdpedido() {
@@ -98,20 +96,21 @@ public class Pedido implements Serializable {
         this.fechaDespacho = fechaDespacho;
     }
 
-    public Cotizacion getCotizacionIdcotizacion() {
-        return cotizacionIdcotizacion;
-    }
-
-    public void setCotizacionIdcotizacion(Cotizacion cotizacionIdcotizacion) {
-        this.cotizacionIdcotizacion = cotizacionIdcotizacion;
-    }
-
-    public Direccion getDireccionNumeroDomicilio() {
+    public String getDireccionNumeroDomicilio() {
         return direccionNumeroDomicilio;
     }
 
-    public void setDireccionNumeroDomicilio(Direccion direccionNumeroDomicilio) {
+    public void setDireccionNumeroDomicilio(String direccionNumeroDomicilio) {
         this.direccionNumeroDomicilio = direccionNumeroDomicilio;
+    }
+
+    @XmlTransient
+    public Collection<Cotizacion> getCotizacionCollection() {
+        return cotizacionCollection;
+    }
+
+    public void setCotizacionCollection(Collection<Cotizacion> cotizacionCollection) {
+        this.cotizacionCollection = cotizacionCollection;
     }
 
     @XmlTransient
